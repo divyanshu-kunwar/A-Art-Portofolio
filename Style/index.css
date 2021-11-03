@@ -1,0 +1,192 @@
+@keyframes loaderAnime{ 
+    0% {background: linear-gradient(80deg, #FF8EBD 0%, #D48EFF 8%, #9F72FF 9%, #8EFFFF 16%, #05FF00 25%, #FFFA8E 60%) }
+    10% {background: linear-gradient(84deg, #FF8EBD 2%, #D48EFF 12%, #9F72FF 13%, #8EFFFF 20%, #05FF00 30%, #FFFA8E 64%) }
+    20% {background: linear-gradient(88deg, #FF8EBD 4%, #D48EFF 15%, #9F72FF 17%, #8EFFFF 25%, #05FF00 35%, #FFFA8E 68%) }
+    30% {background: linear-gradient(92deg, #FF8EBD 6%, #D48EFF 19%, #9F72FF 21%, #8EFFFF 30%, #05FF00 40%, #FFFA8E 74%) }
+    40% {background: linear-gradient(96deg, #FF8EBD 8%, #D48EFF 22%, #9F72FF 25%, #8EFFFF 35%, #05FF00 45%, #FFFA8E 82%) }
+    50% {background: linear-gradient(100deg, #FF8EBD 10%, #D48EFF 26%, #9F72FF 29%, #8EFFFF 40%, #05FF00 50%, #FFFA8E 86%) }
+    60% {background: linear-gradient(96deg, #FF8EBD 12%, #D48EFF 30%, #9F72FF 33%, #8EFFFF 45%, #05FF00 55%, #FFFA8E 89%) }
+    70% {background: linear-gradient(92deg, #FF8EBD 14%, #D48EFF 35%, #9F72FF 37%, #8EFFFF 50%, #05FF00 60%, #FFFA8E 92%) }
+    80% {background: linear-gradient(88deg, #FF8EBD 16%, #D48EFF 38%, #9F72FF 45%, #8EFFFF 55%, #05FF00 65%, #FFFA8E 95%) }
+    90% {background: linear-gradient(84deg, #FF8EBD 18%, #D48EFF 40%, #9F72FF 50%, #8EFFFF 60%, #05FF00 70%, #FFFA8E 98%) }
+    100% {background: linear-gradient(80deg, #FF8EBD 20%, #D48EFF 42%, #9F72FF 55%, #8EFFFF 65%, #05FF00 75%, #FFFA8E 100%) }
+
+}
+
+/* define variable in root */
+:root{
+    --color-primary: #FF8EBD ;
+    --color-grey : #333333;
+     
+}
+
+/* define a font */
+@font-face {
+    font-family: 'danceScriptBold';
+    src: url('../font/DancingScript-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('../font/Montserrat-Bold.ttf');
+}
+
+body{
+    margin: 0;
+}
+#loader{
+position: absolute;
+width: 100%;
+height: 6px;
+left: 0px;
+top: 0px;
+animation-name: loaderAnime;
+animation-duration: 1000ms;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+
+#topbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+#artist{
+    font-size: larger;
+    font-family: danceScriptBold;
+}
+.nav_item{
+    font-family: MontserratRegular;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--color-grey);
+    letter-spacing: 1px;
+}
+#Hamburgermenu{
+    height: 24px;
+    display: none;
+}
+
+.nav_select{
+    color: var(--color-primary);
+    padding-bottom: 2px;
+    border-bottom: var(--color-primary) solid 2px;
+    background-color: #FFE3EF2F;
+}
+
+.nav_item:hover{
+    font-family: MontserratBold;
+    color: #000;
+    letter-spacing: 0px;
+}
+#cover{
+    display: flex;
+    background: url("../Media/blobs/1.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#cover img{
+    margin-top: -40px;
+    margin-left: 30%;
+}
+
+#dragon{
+    width: 5%;
+    transform:rotate(-90deg) translate(-100%, 300px);
+    font-family: MontserratRegular;
+    font-size: xx-large;
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+#ArtGallery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 5%;
+    justify-content: space-around;
+}
+
+div.gallery {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    width: auto;
+    display: flex;
+    box-shadow: 0px 2px 5px #ff7de346;
+    border-radius: 10px;
+  }
+  
+  div.gallery:hover {
+    box-shadow: 0px 4px 20px #7de1ff86;
+  }
+  
+  div.gallery img {
+    width: auto;
+    height: 300px;
+  }
+@media screen and (max-width: 800px){
+    nav{
+        width: 50%;
+        text-align: center;
+       
+    }
+    nav:hover .nav_item{
+        display: block;
+    }
+    .nav_item{
+        flex-direction: row;
+        margin-top: 20px;
+        margin-right: 40px;
+        font-size: larger;
+        display: none;
+    }
+
+
+    .nav_select{
+        color: var(--color-primary);
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 4px;
+        border-left: var(--color-primary) solid 2px;
+        border-bottom: none;
+        padding-bottom: none;
+        
+    }
+
+    #hamburgermenu{
+        margin-left: 90%;
+        display: block;
+        cursor: pointer;
+    }
+
+    #space_between{
+        margin-top: 10%;
+    }
+
+    #cover img{
+        width: 100%;
+        margin-top: -40px;
+        margin-left: 0%;
+    }
+
+    #dragon{
+        transform:rotate(-90deg) translate(-200%, 200px);
+    }
+
+}
+@media screen and (max-width: 500px){
+    #dragon{
+        transform:rotate(-90deg) translate(-200%, 80px);
+    }
+}   

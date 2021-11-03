@@ -1,0 +1,37 @@
+<svg width="100%" height="10" viewBox="0 0 1142 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+<rect id="rectangle" width="1148" height="10" fill="url(#paint0_linear_3:11)"/>
+<defs>
+<linearGradient id="paint0_linear_3:11" x1="2.26771e-06" y1="5.71522" x2="1148.01" y2="2.91595" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8EBD"/>
+<stop id="col1" offset="0.208333" stop-color="#D48EFF"/>
+<stop id="col2" offset="0.4375" stop-color="#9F72FF"/>
+<stop id="col3" offset="0.630208" stop-color="#8EFFFF"/>
+<stop id="col4" offset="0.807292" stop-color="#05FF00"/>
+<stop id="col5" offset="1" stop-color="#FFFA8E"/>
+</linearGradient>
+</defs>
+
+<script>
+    
+
+    window.addEventListener("DOMContentLoaded" , () => {
+        percentAnimation = 0 
+
+
+    setInterval(function(){
+        
+        percentAnimation += 0.01
+        document.getElementById("rectangle").width = percentAnimation * 1148
+        if(percentAnimation>100){
+            percentAnimation = 0
+        }
+    }, 10)
+    })
+    
+    
+
+</script>
+
+</svg>
